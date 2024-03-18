@@ -60,7 +60,7 @@
 
 ## Setup autostart
     
-    * Create, test, and enable activitywatch service
+* Create, test, and enable activitywatch service
 
     ```
     sudo cp activitywatch.service /etc/systemd/system/
@@ -70,9 +70,8 @@
     sudo systemctl enable activitywatch
     ```
 
-    * Create desktop autostart for `aw-watcher`
+* Create desktop autostart for `aw-watcher`
 
     ```
     sudo cp aw-watcher.desktop /etc/xdg/autostart/
     ```
-
