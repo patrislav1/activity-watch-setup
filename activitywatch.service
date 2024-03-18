@@ -1,0 +1,12 @@
+[Unit]
+Description=Activity Watch
+After=network.target
+
+[Service]
+Type=simple
+User=patrick
+ExecStart=/opt/activitywatch/aw-server/aw-server
+
+[Install]
+WantedBy=multi-user.target
+
