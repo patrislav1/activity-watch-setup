@@ -58,20 +58,34 @@
     https://github.com/akohlbecker/aw-watcher-tmux?tab=readme-ov-file#install-the-aw-watcher-tmux-plugin
     ```
 
+## tmux-attached
+
+* install aw-watcher-tmux-attached
+    ```
+    pip3 install aw-watcher-tmux-attached
+    ```
+
 ## Setup autostart
     
-* Create, test, and enable activitywatch service
+* Create, test, and enable services
 
     ```
-    sudo cp activitywatch.service /etc/systemd/system/
-    sudo service activitywatch start
-    journalctl -u activitywatch
-    sudo service activitywatch stop
-    sudo systemctl enable activitywatch
-    ```
+    mkdir -p $HOME/.local/share/systemd/user
+    cp *.service $HOME/.local/share/systemd/user
 
-* Create desktop autostart for `aw-watcher`
+    systemctl --user start activitywatch
+    journalctl --user -u activitywatch
+    systemctl --user enable activitywatch
 
-    ```
-    sudo cp aw-watcher.desktop /etc/xdg/autostart/
+    systemctl --user start aw-afk
+    journalctl --user -u aw-afk
+    systemctl --user enable aw-afk
+
+    systemctl --user start aw-window
+    journalctl --user -u aw-window
+    systemctl --user enable aw-window
+
+    systemctl --user start aw-tmux-attached
+    journalctl --user -u aw-tmux-attached
+    systemctl --user enable aw-tmux-attached
     ```

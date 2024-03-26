@@ -1,0 +1,11 @@
+[Unit]
+Description=Activity Watch window watcher
+Requires=activitywatch.service
+After=activitywatch.service
+
+[Service]
+Type=simple
+ExecStart=/opt/activitywatch/aw-watcher-window/aw-watcher-window
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Activity Watch Tmux watcher
+Requires=activitywatch.service
+After=activitywatch.service
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/aw-watcher-tmux-attached
+
+[Install]
+WantedBy=default.target

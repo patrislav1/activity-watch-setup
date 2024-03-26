@@ -4,9 +4,9 @@ After=network.target
 
 [Service]
 Type=simple
-User=patrick
 ExecStart=/opt/activitywatch/aw-server/aw-server
+# Make sure it is up and running for the watcher clients
+ExecStartPost=/bin/sleep 10
 
 [Install]
-WantedBy=multi-user.target
-
+WantedBy=default.target

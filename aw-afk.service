@@ -1,0 +1,11 @@
+[Unit]
+Description=Activity Watch AFK watcher
+Requires=activitywatch.service
+After=activitywatch.service
+
+[Service]
+Type=simple
+ExecStart=/opt/activitywatch/aw-watcher-afk/aw-watcher-afk
+
+[Install]
+WantedBy=default.target
