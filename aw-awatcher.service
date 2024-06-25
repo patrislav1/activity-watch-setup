@@ -1,11 +1,11 @@
 [Unit]
-Description=Activity Watch AFK watcher
+Description=Activity Watch window/idle watcher
 Requires=activitywatch.service
 After=activitywatch.service
 
 [Service]
 Type=simple
-ExecStart=/opt/activitywatch/aw-watcher-afk/aw-watcher-afk
+ExecStart=/usr/bin/aw-awatcher
 
 [Install]
 WantedBy=default.target

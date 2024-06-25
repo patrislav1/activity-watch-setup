@@ -77,13 +77,9 @@
     journalctl --user -u activitywatch
     systemctl --user enable activitywatch
 
-    systemctl --user start aw-afk
-    journalctl --user -u aw-afk
-    systemctl --user enable aw-afk
-
-    systemctl --user start aw-window
-    journalctl --user -u aw-window
-    systemctl --user enable aw-window
+    systemctl --user start aw-awatcher
+    journalctl --user -u aw-awatcher
+    systemctl --user enable aw-awatcher
 
     systemctl --user start aw-tmux-attached
     journalctl --user -u aw-tmux-attached
